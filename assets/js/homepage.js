@@ -51,6 +51,7 @@ var getFeaturedRepos = function(language) {
     if (response.ok) {
       response.json().then(function(data) {
         displayRepos(data.items, language);
+        console.log(data);
       });
     } else {
       alert('Error: GitHub User Not Found');
