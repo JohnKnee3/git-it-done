@@ -66,6 +66,7 @@ var getFeaturedRepos = function(language) {
     // request was successful
     if (response.ok) {
       response.json().then(function(data) {
+        console.log(data.items[0]);
         displayRepos(data.items, language);
       });
     } else {
